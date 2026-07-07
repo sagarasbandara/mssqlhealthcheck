@@ -1,0 +1,11 @@
+# Local encrypted SQL credentials. Tied to the Windows user/machine.
+sql-prod-credential.xml
+
+# Generated report output.
+*.html
+!mssql-daily-health-template.html
+
+# Common local clutter.
+Thumbs.db
+Desktop.ini
+.DS_Store
