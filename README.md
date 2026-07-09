@@ -1,12 +1,44 @@
 # MSSQL Daily Health Check
 
-Generates an HTML daily health report for a Microsoft SQL Server instance.
+A PowerShell-based SQL Server health check solution that generates a daily HTML report for DBAs, system administrators, and infrastructure teams.
 
-The report is produced by `Generate-MSSQLDailyHealthReport.ps1` and rendered with
-`mssql-daily-health-template.html`.
+## What It Does
 
-If you use the provided batch file, create the SQL credential file first. The
-health check expects `sql-prod-credential.xml` to exist before it runs.
+The script automatically identifies whether the target SQL Server is:
+
+- Standalone SQL Server
+- SQL Server Failover Cluster node
+- Log Shipping enabled server
+
+Based on the detected configuration, it performs a series of health checks and generates a consolidated HTML report.
+
+Checks include:
+
+- Server uptime and instance information
+- SQL Server service status
+- Database status and availability
+- Backup health and recency
+- SQL Agent job status
+- Disk space availability
+- Failed jobs and critical alerts
+- Index fragmentation analysis
+- High Availability configuration validation
+- Log Shipping status (where applicable)
+
+To minimize impact on production environments:
+
+- The tool primarily reads system databases and DMVs
+- Large index fragmentation scans can be skipped automatically or manually
+- Query timeouts can be configured
+
+## Sample Report
+
+![Health Report Screenshot](docs/report
+- Daily DBA health checks
+- Operational monitoring
+- Infrastructure reviews
+- Managed service reporting
+- SQL Server environment validation
 
 ## Prerequisites
 
