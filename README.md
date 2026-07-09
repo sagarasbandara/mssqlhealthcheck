@@ -172,3 +172,8 @@ C:\SQL Reports
   `-OutputPath`.
 - If the report takes too long, increase `-QueryTimeoutSeconds` or use
   `-SkipIndexFragmentation`.
+## License
+
+Copyright © 2026 Sagara Bandara
+
+This project is licensed under the MIT License. See the LICENSE file for details.
